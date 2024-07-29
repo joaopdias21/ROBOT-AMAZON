@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-07-29T17:28:39.407736" rpa="false" schemaversion="5">
+<suite id="s1" name="Amazon Login" source="C:\Users\Pichau\robot\amazon_login.robot">
+<test id="s1-t1" name="Login To Amazon" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-29T17:28:39.718076" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/ap/signin?openid.pape.max_auth_age=0&amp;openid.return_to=https%3A%2F%2Fwww.amazon.com.br%2Fref%3Dnav_ya_signin&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=brflex&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-29T17:28:39.717071" elapsed="2.693099"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-29T17:28:42.411170" elapsed="0.050401"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=ap_email</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-29T17:28:42.473574" elapsed="0.036176"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-29T17:28:42.510746" level="INFO">Typing text 'testeamzon@hotmail.com' into text field 'id=ap_email'.</msg>
+<arg>id=ap_email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T17:28:42.509750" elapsed="0.464386"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-29T17:28:42.975134" level="INFO">Clicking button 'id=continue'.</msg>
+<arg>id=continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T17:28:42.975134" elapsed="1.065627"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=ap_password</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-29T17:28:44.041761" elapsed="0.035375"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-29T17:28:44.078137" level="INFO">Typing text '123456789' into text field 'id=ap_password'.</msg>
+<arg>id=ap_password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T17:28:44.078137" elapsed="0.098377"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-29T17:28:44.177517" level="INFO">Clicking button 'id=signInSubmit'.</msg>
+<arg>id=signInSubmit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T17:28:44.176514" elapsed="0.100632"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-07-29T17:28:47.211766" level="INFO">${current_url} = https://www.amazon.com.br/ref=nav_ya_signin</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-07-29T17:28:44.277146" elapsed="2.934620"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${EXPECTED_URL}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-07-29T17:28:47.225770" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-29T17:28:47.346767" elapsed="2.603287"/>
+</kw>
+<status status="PASS" start="2024-07-29T17:28:39.715815" elapsed="10.235247"/>
+</test>
+<status status="PASS" start="2024-07-29T17:28:39.410739" elapsed="10.541321"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Login">Amazon Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
