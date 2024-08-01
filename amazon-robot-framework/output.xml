@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-01T15:02:32.016704" rpa="false" schemaversion="5">
+<suite id="s1" name="Add To Cart Test" source="C:\Users\Pichau\robot\amazon-robot-framework\tests\add_to_cart_test.robot">
+<test id="s1-t1" name="Add Alexa To Cart" line="16">
+<kw name="Open Browser To URL" owner="base_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-01T15:02:32.333705" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-01T15:02:32.333705" elapsed="2.365571"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-01T15:02:34.700277" elapsed="0.108000"/>
+</kw>
+<arg>${URL}</arg>
+<status status="PASS" start="2024-08-01T15:02:32.332706" elapsed="2.475571"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-01T15:02:44.811554" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-01T15:02:34.810276" elapsed="10.001278"/>
+</kw>
+<kw name="Log In" owner="login_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-01T15:02:44.813555" level="INFO">Clicking element 'id=nav-link-accountList-nav-line-1'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T15:02:44.812556" elapsed="0.900049"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T15:02:45.713612" level="INFO">Typing text 'testeamzon@hotmail.com' into text field 'id=ap_email'.</msg>
+<arg>${EMAIL_FIELD}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T15:02:45.712605" elapsed="0.209009"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-01T15:02:45.922611" level="INFO">Clicking button 'id=continue'.</msg>
+<arg>${CONTINUE_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T15:02:45.921614" elapsed="0.865992"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T15:02:46.788607" level="INFO">Typing text '123456789' into text field 'id=ap_password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T15:02:46.787606" elapsed="0.350999"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-01T15:02:47.139608" level="INFO">Clicking button 'id=signInSubmit'.</msg>
+<arg>${SIGNIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T15:02:47.138605" elapsed="2.007696"/>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-08-01T15:02:44.811554" elapsed="4.334747"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-01T15:02:59.147566" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-01T15:02:49.147301" elapsed="10.000265"/>
+</kw>
+<kw name="Search For Product" owner="home_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T15:02:59.148569" level="INFO">Typing text 'Alexa' into text field 'id=twotabsearchtextbox'.</msg>
+<arg>${SEARCH_BAR}</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T15:02:59.148569" elapsed="0.185008"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-01T15:02:59.333577" level="INFO">Clicking button 'id=nav-search-submit-button'.</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T15:02:59.333577" elapsed="16.102606"/>
+</kw>
+<arg>Alexa</arg>
+<status status="PASS" start="2024-08-01T15:02:59.147566" elapsed="16.288617"/>
+</kw>
+<kw name="Select First Product" owner="product_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-01T15:03:15.438178" level="INFO">Clicking element 'xpath=(//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[2]/div/div/span/div/div/div[3]/div[2]/h2/a)'.</msg>
+<arg>${FIRST_PRODUCT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T15:03:15.437222" elapsed="5.299423"/>
+</kw>
+<status status="PASS" start="2024-08-01T15:03:15.437222" elapsed="5.299423"/>
+</kw>
+<kw name="Add Product To Cart" owner="product_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-01T15:03:20.738647" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T15:03:20.738647" elapsed="1.034443"/>
+</kw>
+<status status="PASS" start="2024-08-01T15:03:20.737647" elapsed="1.036446"/>
+</kw>
+<status status="PASS" start="2024-08-01T15:02:32.331709" elapsed="49.452385"/>
+</test>
+<status status="PASS" start="2024-08-01T15:02:32.019709" elapsed="49.770126"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Add To Cart Test">Add To Cart Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
